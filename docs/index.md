@@ -25,5 +25,16 @@ contained in the raw data.
 
 ### Feature Engineering
 
-Features, USER_LAT, USER_LONG, VENUE_LAT, VENUE_LONG are used to
-compute the distance between the user and venue.
+In general, we use the available features to generate extra features
+that would be useful in providing insights.
+
+Features such as  USER_LAT, USER_LONG, VENUE_LAT, VENUE_LONG are used to
+compute the distance between the user and venue, 
+
+- USER_VENUE_DIST (Distance between user and venue)
+- DayOfWeek (Day of the week)
+- user_coordinates, venue_coordinates (estimated user location)
+- venue_postal_code, user_postal_code (estimated venue location)
+- source_of_order_pcode (postal code associated with location)
+- Orders per hour (Orders issued/received in a given hour
+- Source of order based on postal code (A classification feature (IN/OUT) used to indicate whether an order came from within the postal code or an area outside the postal code
