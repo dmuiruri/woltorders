@@ -1,9 +1,11 @@
 [Introduction](./../../index.md) | [Exploratory Analysis](./../pages/data_exploration.md) | [Forecasting Orders](./../pages/order_forecasting.md) |[Classifying Orders](./../pages/order_classification.md)
 
-# Data Overview
+# Overview
 
 This section investigates the relationships between features and the
-individual characteristics of the variables of interest.
+individual characteristics of some selected variables. The main goal
+is to understand the data and also the underlying processes driving
+data generation.
 
 ## Correlations
 
@@ -39,7 +41,7 @@ of under/over estimation of the time required to deliver the meals.
 
 ![distplot](../images/distribution_uservenue_itemcount_dist.png)
 
-[back](./../pages/data_exploration.md)
+[back to top](./../pages/data_exploration.md)
 
 ##  Day of the week effect and orders per day
 
