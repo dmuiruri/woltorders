@@ -1,2 +1,4 @@
 # woltorders
-This project is an analysis of order data from Wolt -a food delivery platform.
+
+This project presents an analysis of data (orders data) from Wolt,
+which is a food delivery platform.

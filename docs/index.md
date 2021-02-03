@@ -26,7 +26,8 @@ contained in the raw data.
 ### Feature Engineering
 
 In general, we use the available features to generate extra features
-that would be useful in providing insights.
+that would be useful in providing insights either extra insights or
+could be used to enhance modelling algorithms.
 
 Features such as  USER_LAT, USER_LONG, VENUE_LAT, VENUE_LONG are used to
 compute the distance between the user and venue, 
