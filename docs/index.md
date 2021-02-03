@@ -1,3 +1,5 @@
+[Introduction](./../index.md) | [Exploratory Analysis](./../pages/data_exploration.md) | [Forecasting Orders](./../pages/order_forecasting.md) |[Classifyinf Orders](./../pages/order_classification.md)
+
 # Introduction
 
 In this project data from a food delivery app is analysed with the
