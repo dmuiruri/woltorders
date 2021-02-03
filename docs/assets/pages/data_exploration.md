@@ -1,6 +1,6 @@
 [Introduction](./../../index.md) | [Exploratory Analysis](./../pages/data_exploration.md) | [Forecasting Orders](./../pages/order_forecasting.md) |[Classifying Orders](./../pages/order_classification.md)
 
-# Overview
+# Data Exploration
 
 This section investigates the relationships between features and the
 individual characteristics of some selected variables. The main goal
