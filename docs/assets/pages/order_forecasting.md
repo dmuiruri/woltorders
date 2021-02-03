@@ -31,6 +31,9 @@ ACTUAL_DELIVERY_MINUTES + \beta_5 CLOUD_COVERAGE + \beta_6 TEMPERATURE
 + \beta_7 WIND_SPEED + \beta_8 PRECIPITATION + \beta_9 USER_VENUE_DIST
 + \beta_10 DayOfWeek $$
 
+{% raw %}
+  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+ {% endraw %}
 
 
 [back to top](./../pages/order_forecasting.md)
