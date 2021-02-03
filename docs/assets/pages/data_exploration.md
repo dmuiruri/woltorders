@@ -8,6 +8,11 @@ individual characteristics if variables of interest.
 ## Correlations
 
 The matrix of correlations between variables indicates that most
-variables have low correlations, meaning not structural causality can
-be generated.
-![Correlations](./../assets/images/correlations_wolt.png))
+variables have low correlations, meaning no structural causality can
+be generated variables in their current form.
+![Correlations](../images/correlations_wolt.png))
+
+The image below shows the scatter plots of individual variables
+against each other, this plot visually presents the correlations.
+
+![Correlations](../images/scatter_kde_plots.png)
