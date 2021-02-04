@@ -32,14 +32,17 @@ values obtain between the train set and test set. Finally, the ARIMA
 model provides the best results. An accompanying results table shows
 the actual values
 
-![lr_tree_train_test](../images/rmse_all.png){: .center-block :}
+![lr_tree_train_test](../images/rmse_all.png)
 
-|	|Train RMSE | Test RMSE |
-|-------|-----------|-----------|
+|	| Train RMSE | Test RMSE |
+|-------|------------|-----------|
 | LR    | 10.31 | 10.41 |
 | LR Dummy | 10.02 | 10.18 |
 | Boosted Tree | 6.23 | 8.12 |
 |ARIMA 	| 5.29 | 5.72 |
+
+Details of each model and the tuning process has been outlined in the
+subsections below.
 
 ## Linear Regression model (OLS)
 
