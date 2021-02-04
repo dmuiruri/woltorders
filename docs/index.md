@@ -43,4 +43,4 @@ compute the distance between the user and venue,
   (IN/OUT) used to indicate whether an order came from within the
   postal code or an area outside the postal code
 
-[back](./index.md)
+[back to top](./index.md)
