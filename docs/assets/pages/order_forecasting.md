@@ -1,5 +1,5 @@
 {% include mathjax.html %}
-[Introduction](./../../index.md) | [Exploratory Analysis](./../pages/data_exploration.md) | [Forecasting Orders](./../pages/order_forecasting.html) |[Classifying Orders](./../pages/order_classification.md)
+[Introduction](./../../index.md) | [Exploratory Analysis](./../pages/data_exploration.md) | [Forecasting Orders](./../pages/order_forecasting.md) |[Classifying Orders](./../pages/order_classification.md)
 
 # Forecasting
 
@@ -17,7 +17,19 @@ The main variable being predict(endog) is number of orders. This
 variable is created by aggregating the amount of orders obtained per
 day or per hour depending with the use case.
 
-## Linear Regression model
+Cross validation setup for the linear regression model, model with
+dummy variables and the boosted tree is based on repeated cross
+validations (10 repeatitions of 10 splits). The ARIMA model is cross
+validated based on rolling cross validation, where the data is split
+into 10 testing folds.
+
+A summary of the results between these models is summarised in the
+image below, indicating a comparison of the RMSE values between all
+models
+
+![lr_tree_train_test](../images/rmse_all.png)
+
+## Linear Regression model (OLS)
 
 Following the data exploration section, a linear regression model is
 expected to provide weak results as the data involved showed very low
@@ -25,38 +37,55 @@ correlations. Nonetheless using it as a part of the model set would
 provide a foundation for improvement.
 
 The fitted model is of the form:
+<< Model to be added here once I get mathjax to work>>
+# $$ OrdersPerHour_t = \beta_0 + \beta_1 EST_ACT_Diff + \beta_2
+# ITEM_COUNT + \beta_3 ESTIMATED_DELIVERY_MINUTES + \beta_4
+# ACTUAL_DELIVERY_MINUTES + \beta_5 CLOUD_COVERAGE + \beta_6 TEMPERATURE
+# + \beta_7 WIND_SPEED + \beta_8 PRECIPITATION + \beta_9 USER_VENUE_DIST
+# + \beta_10 DayOfWeek $$
 
-$$ OrdersPerHour_t = \beta_0 + \beta_1 EST_ACT_Diff + \beta_2
-ITEM_COUNT + \beta_3 ESTIMATED_DELIVERY_MINUTES + \beta_4
-ACTUAL_DELIVERY_MINUTES + \beta_5 CLOUD_COVERAGE + \beta_6 TEMPERATURE
-+ \beta_7 WIND_SPEED + \beta_8 PRECIPITATION + \beta_9 USER_VENUE_DIST
-+ \beta_10 DayOfWeek $$
-
-{% raw %}
-  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
- {% endraw %}
+# {% raw %}
+#   $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+#  {% endraw %}
 
 
-[back to top](./../pages/order_forecasting.html)
+[back to top](./../pages/order_forecasting.md)
 
-## A Linear regression model with dummy variables
+## Linear regression model with dummy variables
 
 Since weekdays were shown to have different order patterns, this model
 explores if this patterns would result in a reasonable prediction
 model.
 
-[back to top](./../pages/order_forecasting.html)
+[back to top](./../pages/order_forecasting.md)
 
 
-## A Regression Decision Tree Model
-Regression trees are considered a good non-parametetric approach to this problem
+## Regression Decision Tree Model (Boosted Regression Tree) Regression
+trees are considered a good non-parametetric approach to this problem
+since the data indicated lack of non-linear dependicies between features.
 
-[back to top](./../pages/order_forecasting.html)
+To identify a good estimator tree, grid search cross-validation and
+randomised search cross-validation were applied.
+grid search results: {'criterion': 'mse', 'max_depth': 5, 'max_features': 'sqrt'}
+randomized search results: {'max_features': 'sqrt', 'max_depth': 5, 'criterion': 'friedman_mse'}
+
+A boosted tree with max_depth=5, criterion='friedman_mse',
+max_features='sqrt' was eventually fitted. Perhaps I should have also
+compared results of the boosted tree from each of these methods
+independently.
+
+![lr_tree_train_test](../images/train_test_lr_lrd_tree.png)
+
+[back to top](./../pages/order_forecasting.md)
 
 ## A ARIMA Model
 
 Given that the data indicated highly cyclic characteristics, it is
-imperative that we test a dedicatedtimeseries model on the data.
+imperative that we test a dedicated timeseries model on the data. The
+image below indicates cross validation performance between test and
+train set.
 
-[back to top](./../pages/order_forecasting.html)
+![arima_train_test](../images/arima_train_test.png)
+
+[back to top](./../pages/order_forecasting.md)
 

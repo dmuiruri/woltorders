@@ -1,4 +1,4 @@
-[Introduction](./index.md) | [Exploratory Analysis](./assets/pages/data_exploration.md) | [Forecasting Orders](./assets/pages/order_forecasting.html) |[Classifying Orders](./assets/pages/order_classification.md)
+[Introduction](./index.md) | [Exploratory Analysis](./assets/pages/data_exploration.md) | [Forecasting Orders](./assets/pages/order_forecasting.md) |[Classifying Orders](./assets/pages/order_classification.md)
 
 # Introduction
 
