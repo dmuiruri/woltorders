@@ -24,9 +24,22 @@ into 10 testing folds.
 
 A summary of the results between these models is summarised in the
 image below, indicating a comparison of the RMSE values between all
-models
+models. Perfomance between a linear regression model with and without
+weekday dummy variables obtain almost similar results. The boosted
+tree model indicates improved performance compared to the linear model
+versions, notably though there is a significant disparity between RMSE
+values obtain between the train set and test set. Finally, the ARIMA
+model provides the best results. An accompanying results table shows
+the actual values
 
 ![lr_tree_train_test](../images/rmse_all.png)
+
+|	|Train RMSE | Test RMSE |
+|-------|-----------|-----------|
+| LR    | 10.31 | 10.41 |
+| LR Dummy | 10.02 | 10.18 |
+| Boosted Tree | 6.23 | 8.12 |
+|ARIMA 	| 5.29 | 5.72 |
 
 ## Linear Regression model (OLS)
 
@@ -48,7 +61,7 @@ model.
 [back to top](./../pages/order_forecasting.md)
 
 
-## Regression Decision Tree Model (Boosted Regression Tree) Regression
+## Regression Tree Model (Boosted Regression Tree)
 trees are considered a good non-parametetric approach to this problem
 since the data indicated lack of non-linear dependicies between features.
 
