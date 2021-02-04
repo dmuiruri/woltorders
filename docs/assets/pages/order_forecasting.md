@@ -35,8 +35,7 @@ expected to provide weak results as the data involved showed very low
 correlations. Nonetheless using it as a part of the model set would
 provide a foundation for improvement.
 
-The fitted model is of the form:
-<< Model to be added here once mathjax is fixed >>
+Fitted model to be added here (mathjax)
 
 [back to top](./../pages/order_forecasting.md)
 
@@ -67,7 +66,7 @@ independently.
 
 [back to top](./../pages/order_forecasting.md)
 
-## A ARIMA Model
+## An ARIMA Model
 
 Given that the data indicated highly cyclic characteristics, it is
 imperative that we test a dedicated timeseries model on the data. The
