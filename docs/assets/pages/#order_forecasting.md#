@@ -67,7 +67,7 @@ independently.
 
 [back to top](./../pages/order_forecasting.md)
 
-## A ARIMA Model
+## An ARIMA Model
 
 Given that the data indicated highly cyclic characteristics, it is
 imperative that we test a dedicated timeseries model on the data. The
