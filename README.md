@@ -21,8 +21,9 @@ The original data contains the following features/variables
 - WIND_SPEED
 - PRECIPITATION
 
-The analysis includes an exploratory analysis, a predition model and a
-classification model.
+The analysis includes an exploratory analysis, a regression aspect and
+a classification aspect. The regression and classification problems
+are aimed at creating a predictive model.
 
 ### Exploratory Analysis
 
@@ -54,11 +55,12 @@ accuracy. The logistic regression shows the highest accuracies of 82%
 
 ## Site
 
-The results of these analysis are exhaustivelypresented in site
-[here](https://dmuiruri.github.io/woltorders/) where more details and
+The results of these analysis are exhaustively presented on this
+[site](https://dmuiruri.github.io/woltorders/) where more details and
 relevant graphs are presented.
 
 ## Notebook and Data
+
 A corresponding notebook and data can be obtained by downloading the
 zip file(wolt_project.zip) in the repository.
 
