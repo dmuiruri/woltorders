@@ -32,7 +32,7 @@ values obtain between the train set and test set. Finally, the ARIMA
 model provides the best results. An accompanying results table shows
 the actual values
 
-![lr_tree_train_test](../images/rmse_all.png)
+![lr_tree_train_test](../images/rmse_all.png){: .center-block :}
 
 |	|Train RMSE | Test RMSE |
 |-------|-----------|-----------|
