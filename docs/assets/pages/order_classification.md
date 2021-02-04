@@ -23,9 +23,9 @@ the class imbalance is significant.
 | (%)   | 21.6%| 78.4% |
 
 A further evaluation of the averages of various features when
-stratified by these classes indeed does indicate order that are out
+stratified by these classes indeed does indicate orders that are out
 the the postal region tend to be 1.15Km away while those within a
-postal region tend to be 500 meters away.
+postal region tend to be 560 meters away.
 
 |   FEATURE   	      | IN (mean) | OUT (mean)|
 |:--------------------|:----------|:----------|
@@ -38,5 +38,24 @@ postal region tend to be 500 meters away.
 | WIND_SPEED 		     | 3.781489	  |3.793611 |
 | PRECIPITATION 	     | 0.320309   |0.342568 |
 | USER_VENUE_DIST 	     |0.558221 	  |1.152561 |
+
+[back to top](./../pages/order_classification.md)
+
+
+## Classification Models
+The classification models applied
+- Logistic regression model
+- Support Vector Machine (SVM)
+- Decision Tree (still under evaluation)
+
+The linear regression model was cross validated with 10 folds with 10
+repetitions while the SVM model was cross validated using 5 folds with
+3 repetitions each (performance constraints at higher
+split-repeations)
+
+The image below shows a comparison of the accuracy levels between the
+logistic regression and SVM models.
+
+![lr_svm_acc](../images/lr_svm_acc.png)
 
 [back to top](./../pages/order_classification.md)
